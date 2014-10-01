@@ -1,6 +1,8 @@
 require 'sinatra'
 require 'json'
 
+lms_hash = JSON.parse(File.read('data/lmsdata.json'))
+
 get '/height/:height' do
   centile = Centile.new
   "Height: #{centile.height}"
